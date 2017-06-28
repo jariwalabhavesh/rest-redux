@@ -7,6 +7,7 @@ import AddTodo from './todos/containers/AddTodo'
 import VisibleTodoList from './todos/containers/VisibleTodoList'
 import IncompleteTodos from './todos/containers/IncompleteTodos'
 import CompletedTodos from './todos/containers/CompletedTodos'
+import Grid from './module/grid'
 
 import Login from './user/containers/Login'
 
@@ -19,8 +20,8 @@ export default ({ store }) => {
       <Footer />
       <AddTodo />
       <VisibleTodoList />
-      <IncompleteTodos />
       <CompletedTodos />
+      <Grid />
     </div>
   }
 

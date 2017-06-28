@@ -26,14 +26,14 @@ const paging = (list, props) => (Component) => {
     }
   }
   
-  class ListHoc extends React.Component {
-    render() {
-      return <Component {...this.props} {...props} />
-      // restActions={actions}
-    }
-  }
+  // class ListHoc extends React.Component {
+  //   render() {
+  //     return <Component {...this.props} {...props} />
+  //     // restActions={actions}
+  //   }
+  // }
 
-  return connect(mapStateToProps, mapDispatchToProps)(ListHoc)
+  return connect(mapStateToProps, mapDispatchToProps)(Component)
 }
 
 export default paging

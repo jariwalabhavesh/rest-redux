@@ -1,5 +1,5 @@
 import { LOGIN_SUCCESS, LOGOUT_SUCCESS } from './user/actions'
-import restRedux, { todo, completedTodos } from './api'
+import restRedux, { todo, completedTodos, incompleteTodos } from './api'
 const todoActions = todo.actions
 
 export const authEventsMiddleware = store => next => action => {
@@ -14,6 +14,7 @@ export const authEventsMiddleware = store => next => action => {
       //const {actions, selectors} = myTodosList
       // actions.setOptions({userId: 2})
       store.dispatch(completedTodos.actions.page(0))
+      store.dispatch(incompleteTodos.actions.page(0))
       break
     case LOGOUT_SUCCESS:
       restRedux.updateGlobal({headers: {
