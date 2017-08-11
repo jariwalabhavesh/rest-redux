@@ -6,6 +6,7 @@
   "author": "Nachiket Patel",
   "license": "MIT",
   "dependencies": {
+    "griddle-react": "^1.5.0",
     "normalizr": "^3.2.3",
     "prop-types": "^15.5.10",
     "query-string": "^4.3.4",
